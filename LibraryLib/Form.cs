@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LibraryLib
 {
-    public /*abstract*/ class Form : IForm
+    public class Form : IForm
     {
         internal event FormStateHandler TookABookFromLibrary;
         internal event FormStateHandler ReturnABookToALib;
@@ -35,9 +35,7 @@ namespace LibraryLib
         {
             if (Opened != null)
             {
-                Console.ForegroundColor = ConsoleColor.Yellow;
                 Opened(this, new FormEventArgs($"Successfully registred: {_user}. Id: {Id}"));
-                Console.ResetColor();
             }
             else throw new Exception("you're not registred");
         }
@@ -52,9 +50,7 @@ namespace LibraryLib
                     _numOfBooks++;
                     if (TookABookFromLibrary != null)
                     {
-                        Console.ForegroundColor = ConsoleColor.Yellow;
                         TookABookFromLibrary(this, new FormEventArgs($"From library was taken: {book.Title}. Book goes to {_user}"));
-                        Console.ResetColor();
                         book.now = DateTime.Now;
                     }
                 }
@@ -78,9 +74,7 @@ namespace LibraryLib
                         i = _numOfBooks - 1;
                         if (ReturnABookToALib != null)
                         {
-                            Console.ForegroundColor = ConsoleColor.Yellow;
                             ReturnABookToALib(this, new FormEventArgs($"Book was returned to library: {book.Title}"));
-                            Console.ResetColor();
                         }
                         _numOfBooks--;
                         isDeleted = true;
@@ -96,10 +90,7 @@ namespace LibraryLib
         {
             if (Closed != null)
             {
-                Console.ForegroundColor = ConsoleColor.Yellow;
                 Closed(this, new FormEventArgs($"Form {_id} is closed."));
-                //counter--;
-                Console.ResetColor();
                 for (int i = 0; i < _numOfBooks; i++)
                 {
                     DeleteABook(list[i]);

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LibraryLib.Book">
+    <Position X="1.25" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAEAQgAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLib.Books">
+    <Position X="1.25" Y="4.5" Width="1.5" />
+    <Members>
+      <Field Name="books" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAIAAAAABAAAAAAARACAAAAIAAAAAAIAAAAAAAAACAA=</HashCode>
+      <FileName>Books.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="books" />
+      <Field Name="copy" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LibraryLib.Form">
+    <Position X="7.75" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAgAAAAAAQAAAAABAAAQAEAAAgIEgFAAACACAAAA=</HashCode>
+      <FileName>Form.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="list" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.479" />
+  </Class>
+  <Class Name="LibraryLib.FormEventArgs">
+    <Position X="6.5" Y="5.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>FormStateHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLib.Library">
+    <Position X="4.25" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAQARAAAAYAAABQCAAAQAAAAAgAgAgAAACQCAQAA=</HashCode>
+      <FileName>Library.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="allForms" />
+      <Field Name="whatToChoose" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Interface Name="LibraryLib.IForm">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACACAAAA=</HashCode>
+      <FileName>IForm.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="LibraryLib.FormStateHandler">
+    <Position X="8.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>FormStateHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

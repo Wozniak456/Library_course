@@ -6,7 +6,6 @@ namespace LibraryLib
     {
         void AddABook(Book book);
         void DeleteABook(Book book);
-        void ShowForm();
         void Close();
     }
 }

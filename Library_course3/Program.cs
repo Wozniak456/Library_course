@@ -8,7 +8,7 @@ namespace Library_course3
         static void Main(string[] args)
         {
             Library lib = new Library("BAnk");
-            _ = new Books();
+            //_ = new Books();
             bool alive = true;
             while (alive)
             {
@@ -79,7 +79,9 @@ namespace Library_course3
             Console.Write("Input your name: ");
             string name = Console.ReadLine();
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
             lib.Open(name, TakeBookFromLibraryHandler, ReturnBookToLibraryHandler, openAccountHandler, closeAccountHandler);
+            Console.ResetColor();
         }
         private static void ReturnABook(Library lib)
         {
@@ -92,7 +94,9 @@ namespace Library_course3
                 Console.Write("\nInput a num of book, you want to return: ");
                 int num = int.Parse(Console.ReadLine());
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 lib.DeleteABook1(lib.ChooseABookFromFormList(num - 1, id), id);
+                Console.ResetColor();
             }
             catch (Exception ex)
             {
@@ -109,7 +113,9 @@ namespace Library_course3
             Console.WriteLine("Input your id");
             int id = int.Parse(Console.ReadLine());
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
             lib.Close(id);
+            Console.ResetColor();
         }
         private static void ShowForm(Library lib)
         {
@@ -177,7 +183,9 @@ namespace Library_course3
                                 Console.Write("input a num of the book: ");
                                 int num = int.Parse(Console.ReadLine());
                                 Console.Clear();
+                                Console.ForegroundColor = ConsoleColor.Yellow;
                                 lib.AddABook(lib.ChooseABookFromLibraryList(num - 1), id_);
+                                Console.ResetColor();
                             }
                             catch (ArgumentException ex)
                             {
@@ -235,7 +243,9 @@ namespace Library_course3
                                 Console.Write("input a num of the book: ");
                                 int num = int.Parse(Console.ReadLine());
                                 Console.Clear();
+                                Console.ForegroundColor = ConsoleColor.Yellow;
                                 lib.AddABook(lib.ChooseABookFromLibraryList(num - 1), id_);
+                                Console.ResetColor();
                             }
                             catch (ArgumentException ex)
                             {
@@ -293,7 +303,9 @@ namespace Library_course3
                                 Console.Write("input a num of the book: ");
                                 int num = int.Parse(Console.ReadLine());
                                 Console.Clear();
+                                Console.ForegroundColor = ConsoleColor.Yellow;
                                 lib.AddABook(lib.ChooseABookFromLibraryList(num - 1), id_);
+                                Console.ResetColor();
                             }
                             catch (ArgumentException ex)
                             {

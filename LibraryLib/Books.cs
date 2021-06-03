@@ -5,12 +5,12 @@ using System.Text;
 
 namespace LibraryLib
 {
-    public class Books
+    public static class Books
     {
         public static int numOfBooks = 88; //initial number of books in library
         public static List<Book> books;//books in library
         public static Book[] copy;
-        public Books()
+        static Books()
         {
             books = new List<Book>();
             for (int i = 0; i < numOfBooks; i++)
